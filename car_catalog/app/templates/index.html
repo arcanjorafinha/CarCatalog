@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Car List</h2>
+<ul>
+    {% for car in cars %}
+    <li>
+        <a href="/cars/{{ car.id }}">{{ car.name }}</a> - {{ car.power }} HP - ${{ car.price }}
+        <form action="/cars/{{ car.id }}/delete" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

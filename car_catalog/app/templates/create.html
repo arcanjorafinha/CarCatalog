@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Create Car</h2>
+<form action="/cars/create" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="power">Power:</label>
+    <input type="number" id="power" name="power" required>
+    <label for="price">Price:</label>
+    <input type="number" step="0.01" id="price" name="price" required>
+    <button type="submit">Create</button>
+</form>
+{% endblock %}
+
